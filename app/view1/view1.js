@@ -9,12 +9,11 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }])
 
-.controller('View1Ctrl', [function($scope) {
+.controller('View1Ctrl', ['$scope','$window', function($scope,$window) {
 
-  //form validation
-
-  //form save to local storage
-
-  // diplay selected items
+  $scope.logUserInfo = function(user){
+    console.log($scope.user);
+    $window.localStorage.setItem('userInfo', JSON.stringify($scope.user));
+  };
 
 }]);

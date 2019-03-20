@@ -2,35 +2,35 @@
     <div class="signUpInput">
         <label class="signUpLable" >Full Name:</label>
         <span>
-            <input ng-model="userName">
+            <input ng-model="user.userName" placeholder="Enter Full Name">
         </span>
     </div>
     <div class="signUpInput">
         <label class="signUpLable">Address:</label>
         <span>
-            <input ng-model="address">
+            <input ng-model="user.address" placeholder="Enter address">
         </span>
     </div>
     <div class="signUpInput">
         <label class="signUpLable">City:</label>
         <span>
-            <input ng-model="city">
+            <input ng-model="user.city" placeholder="Enter city">
         </span>
     </div>
     <div class="signUpInput">
         <label class="signUpLable">State:</label>
         <span>
-             <input ng-model="state">
+             <input ng-model="user.state" placeholder="Enter state">
         </span>
     </div>
     <div class="signUpInput">
         <label class="signUpLable">Phone:</label>
         <span>
-             <input ng-model="phone">
+             <input ng-model="user.phone" placeholder="Enter phone number">
         </span>
     </div>
     <div></div>
     <div class="signUpButton">
-        <a href="#!/view2"><button> Continue</button></a>
+        <a href="#!/view2"><button ng-click="logUserInfo(user)"> Continue</button></a>
     </div>
 </div>

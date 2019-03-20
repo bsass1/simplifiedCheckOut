@@ -9,13 +9,23 @@ angular.module('myApp.items', ['ngRoute'])
     });
   }])
 
-  .controller('itemsCtrl', [function() {
-    //onclick save image to localstorage
+  .controller('itemsCtrl', ['$scope','$window' ,function($scope, $window) {
+    $scope.ducks = {};
 
+$scope.selectedItem = function(item){
+  var duck = item.split('/')[2].split('.')[0];
 
-    //higlight image as selected
+  if($scope[duck]){
+    $scope[duck] = false;
+    $scope.ducks[duck] = null;
+    delete $scope.ducks[duck];
+  }else{
+    $scope[duck] = true;
+    $scope.ducks[duck] = item;
+  }
 
-    //should diplay amount
+$window.localStorage.setItem('ducksBought', JSON.stringify($scope.ducks));
 
+};
 
   }]);

@@ -1,21 +1,24 @@
+<h2> Buy A Duck $10 each</h2>
 <div class="itemsView">
-    <h2> Buy A Duck</h2>
-    <div>
-        <img src="../images/duck1.jpeg">
+    <div ng-click="selectedItem('../images/duck1.jpeg')">
+        <img ng-class="{selectedDuck:duck1}" src="../images/duck1.jpeg">
     </div>
-    <div>
-        <img src="../images/duck2.jpeg">
+    <div ng-click="selectedItem('../images/duck2.jpeg')">
+        <img ng-class="{selectedDuck:duck2}" src="../images/duck2.jpeg">
     </div>
-    <div>
-        <img src="../images/duck3.jpeg">
+    <div  ng-click="selectedItem('../images/duck3.jpeg')">
+        <img ng-class="{selectedDuck:duck3}" src="../images/duck3.jpeg">
     </div>
-    <div>
-        <img src="../images/duck4.jpeg">
+    <div  ng-click="selectedItem('../images/duck4.jpeg')">
+        <img ng-class="{selectedDuck:duck4}" src="../images/duck4.jpeg">
     </div>
-    <div>
-        <img src="../images/duck5.jpeg">
+    <div  ng-click="selectedItem('../images/duck5.jpeg')">
+        <img ng-class="{selectedDuck:duck5}" src="../images/duck5.jpeg">
     </div>
-    <div>
-        <img src="../images/duck6.jpeg">
+    <div  ng-click="selectedItem('../images/duck6.jpeg')">
+        <img ng-class="{selectedDuck:duck6}" src="../images/duck6.jpeg">
     </div>
+</div>
+<div class="duckButton">
+    <a href="#!/view1"><button> Continue</button></a>
 </div>

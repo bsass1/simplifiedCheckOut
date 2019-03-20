@@ -1,5 +1,25 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div class="checkButton">
+    <button ng-click="checkout(user)">Checkout</button>
+</div>
+<div class="ccImg">
+    <img src="../images/creditcard.jpeg">
+</div>
+<div class="checkOutUser">
+    <div class="checkoutUserInfo">
+        <p><b>Name: </b><span ng-bind="user.userName"></span></p>
+        <p><b>Address: </b><span ng-bind="user.address"></span></p>
+        <p><b>City: </b><span ng-bind="user.city"></span></p>
+        <p><b>State: </b><span ng-bind="user.state"></span></p>
+        <p><b>Phone: </b><span ng-bind="user.state"></span></p>
+    </div>
+    <div class="checkoutItems">
+        <ul>
+            <li ng-repeat="duck in ducks"><img src="{{duck}}"></li>
+        </ul>
+    </div>
+</div>
+<div class="total">
+    <p><b>Total Items: </b><span ng-bind="user.total"></span></p>
+</div>
+
+

@@ -10,6 +10,19 @@ img{
   margin-right: 100px;
 }
 
+h2{
+  text-align: center;
+}
+
+ul{
+  list-style: none;
+}
+li > img{
+  width: 150px;
+  height: 75px;
+  padding: 15px;
+}
+
 .signUpInput{
   margin-left: 10px;
   padding: 10px;
@@ -25,19 +38,67 @@ img{
 }
 
 .signUpButton{
-
   margin-left: 20px;
   padding: 30px;
 }
+
+.itemsView{
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  width: 70%;
+  margin-left: 20%;
+}
+
+.itemsView > div> img {
+  width: 215px;
+  height: 130px;
+  padding: 20px;
+}
+
+.selectedDuck{
+  order: #4eff61;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.duckButton{
+  text-align: center;
+}
+
+.checkOutUser{
+  display: flex;
+  margin-left: 10%;
+}
+
+.ccImg{
+   display: flex;
+  flex-shrink: 5;
+   margin-left: 10%;
+ }
+
+.checkoutUserInfo{
+   margin-top:3%;
+ }
+
+.total{
+  float: right;
+  margin-right: 20%;
+}
+
+.total > p{
+  background-color: #7fffd4;
+}
+.checkButton{
+  margin-right: 20%;
+  float: right;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
   padding: 0 0 0.5em;
-}
-
-
-.menu > li {
-  display: inline;
 }
 
