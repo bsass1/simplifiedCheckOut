@@ -9,6 +9,15 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
+.controller('View2Ctrl', [function($scope) {
+
+    //select payment type
+
+
+  //complete the order
+
+  // post data via http service to api
+
+
 
 }]);
