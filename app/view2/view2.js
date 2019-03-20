@@ -8,22 +8,19 @@ angular.module('myApp.view2', ['ngRoute'])
     controller: 'View2Ctrl'
   });
 }])
-
 .controller('View2Ctrl',[ '$scope','$window','checkout',function($scope, $window,checkout) {
+    $scope.ducks = JSON.parse($window.localStorage.getItem('ducksBought'));
+    $scope.user = JSON.parse($window.localStorage.getItem('userInfo'));
+    $scope.total = count($scope.ducks);
+    $scope.totalAmount = count($scope.ducks) * 10;
 
-  $scope.ducks = JSON.parse($window.localStorage.getItem('ducksBought'));
-  $scope.user = JSON.parse($window.localStorage.getItem('userInfo'));
-  $scope.user['total'] = count($scope.ducks);
+   $scope.checkout = function() {
+     $scope.ducks['total'] =  $scope.total;
+     $scope.ducks['totalAmount'] = $scope.totalAmount;
+     var result = checkout.userCheckout($scope.user, $scope.ducks);
 
-//console.log($scope.user);
-  //complete the order
-
-  // post data via http service to api
-
- $scope.checkout = function() {
-
-   console.log(checkout.userCheckout($scope.user, $scope.ducks));
- };
+     console.log(result);
+   };
 
 }]);
 

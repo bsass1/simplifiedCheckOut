@@ -7,6 +7,7 @@
 <div class="checkOutUser">
     <div class="checkoutUserInfo">
         <p><b>Name: </b><span ng-bind="user.userName"></span></p>
+        <p><b>Email: </b><span ng-bind="user.email"></span></p>
         <p><b>Address: </b><span ng-bind="user.address"></span></p>
         <p><b>City: </b><span ng-bind="user.city"></span></p>
         <p><b>State: </b><span ng-bind="user.state"></span></p>
@@ -19,7 +20,8 @@
     </div>
 </div>
 <div class="total">
-    <p><b>Total Items: </b><span ng-bind="user.total"></span></p>
+    <p><b>Total Items: </b><span ng-bind="total"></span></p>
+    <p><b>Total Amount: </b><span ng-bind="totalAmount"></span></p>
 </div>
 
 

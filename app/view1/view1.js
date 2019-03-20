@@ -12,8 +12,11 @@ angular.module('myApp.view1', ['ngRoute'])
 .controller('View1Ctrl', ['$scope','$window', function($scope,$window) {
 
   $scope.logUserInfo = function(user){
-    console.log($scope.user);
     $window.localStorage.setItem('userInfo', JSON.stringify($scope.user));
+
+    if($scope.userSignUp.$valid){
+       $window.location.href = "#!/view2";
+    }
   };
 
 }]);

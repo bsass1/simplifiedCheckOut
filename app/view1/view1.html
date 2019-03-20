@@ -1,36 +1,46 @@
 <div class="wapper">
+    <form name="userSignUp">
     <div class="signUpInput">
         <label class="signUpLable" >Full Name:</label>
         <span>
-            <input ng-model="user.userName" placeholder="Enter Full Name">
+            <input ng-model="user.userName" placeholder="Enter Full Name" ng-required="true">
+        </span>
+    </div>
+    <div class="signUpInput">
+        <label class="signUpLable" >Email:</label>
+        <span>
+            <input ng-model="user.email" placeholder="Enter Email" ng-required="true">
         </span>
     </div>
     <div class="signUpInput">
         <label class="signUpLable">Address:</label>
         <span>
-            <input ng-model="user.address" placeholder="Enter address">
+            <input ng-model="user.address" placeholder="Enter address" ng-required="true">
+
         </span>
     </div>
     <div class="signUpInput">
         <label class="signUpLable">City:</label>
         <span>
-            <input ng-model="user.city" placeholder="Enter city">
+            <input ng-model="user.city" placeholder="Enter city" ng-required="true">
         </span>
     </div>
     <div class="signUpInput">
         <label class="signUpLable">State:</label>
         <span>
-             <input ng-model="user.state" placeholder="Enter state">
+             <input ng-model="user.state" placeholder="Enter state" ng-required="true">
         </span>
     </div>
     <div class="signUpInput">
         <label class="signUpLable">Phone:</label>
         <span>
-             <input ng-model="user.phone" placeholder="Enter phone number">
+             <input ng-model="user.phone" placeholder="Enter phone number" ng-required="true" ng-focus="checkFields(user)">
         </span>
     </div>
     <div></div>
     <div class="signUpButton">
-        <a href="#!/view2"><button ng-click="logUserInfo(user)"> Continue</button></a>
+        <input type="submit" ng-click="logUserInfo(user)" value="Continue"> </input></a>
     </div>
+    </form>
+    <div class="formStatus" ng-show="userSignUp.checkValidity()">Please complete the form</div>
 </div>

@@ -95,6 +95,11 @@ li > img{
   float: right;
 }
 
+.formStatus{
+  font-weight: 600;
+  color: #f00;
+  text-align: center;
+}
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
